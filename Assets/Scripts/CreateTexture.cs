@@ -18,8 +18,4 @@ public class CreateTexture : MonoBehaviour
 		
 	}
 	
-	void Update ()
-	{
-	
-	}
 }

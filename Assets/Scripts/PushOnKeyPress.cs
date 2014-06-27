@@ -7,11 +7,6 @@ public class PushOnKeyPress : MonoBehaviour
 	public Vector3 force;
 	public Vector3 torque;
 	
-	void Start () 
-	{
-	
-	}
-	
 	void Update ()
 	{
 		if( Input.GetKey( keyCode ) ){
