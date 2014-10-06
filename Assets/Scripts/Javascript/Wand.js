@@ -12,7 +12,6 @@ function Use(){
 	var pos = transform.position + transform.forward;
 	
 	if( Physics.Raycast( pos, transform.forward, hit, 100f ) ){
-		Debug.Log("Explosion on "+hit.collider.name);
 		Explosion( hit.point );
 	}
 }
