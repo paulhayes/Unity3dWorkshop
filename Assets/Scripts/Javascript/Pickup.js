@@ -9,6 +9,7 @@ public var holdingPosition : Transform;
 public var holdingObject : Transform;
 public var pickUpKey : KeyCode;
 public var useObjectKey : KeyCode;
+public var pickUpRadius : float = 0.5f;
 
 function Start () {
 	
@@ -28,7 +29,7 @@ function Pickup(){
 	var playerPosition = playerCamera.transform.position + playerCamera.transform.forward;
 	var playerDirection = playerCamera.transform.forward;
 	var hit : RaycastHit;
-	if( Physics.Raycast( playerPosition, playerDirection, hit, maximumDistance ) ){
+	if( Physics.SphereCast( playerPosition, pickUpRadius, playerDirection, hit, maximumDistance ) ){
 		if( hit.rigidbody ){
 			
 			hit.rigidbody.isKinematic = true;
