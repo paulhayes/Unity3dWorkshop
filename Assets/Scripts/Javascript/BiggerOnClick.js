@@ -1,6 +1,6 @@
 ﻿#pragma strict
 /*
- * BiggerOnClick.js
+ * BiggerOnClick
  * Makes an object bigger when you click it
  */
 

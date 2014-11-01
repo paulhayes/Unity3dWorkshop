@@ -1,6 +1,6 @@
 ﻿#pragma strict
 /*
- * Pickup.js
+ * Pickup
  */
  
 public var playerCamera : Camera;
@@ -29,7 +29,7 @@ function Update () {
 }
 
 function Pickup(){
-	var playerPosition = playerCamera.transform.position + playerCamera.transform.forward;
+	var playerPosition = playerCamera.transform.position;
 	var playerDirection = playerCamera.transform.forward;	
 	var hit : RaycastHit;
 	

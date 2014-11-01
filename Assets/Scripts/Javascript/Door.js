@@ -1,5 +1,9 @@
 ﻿#pragma strict
 
+/*
+ * Door
+ */
+
 var closeRotation : Transform;
 var openRotation : Transform;
 var duration : float;

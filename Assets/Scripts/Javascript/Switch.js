@@ -1,5 +1,10 @@
 ﻿#pragma strict
 
+/*
+ * LightSwitch
+ */
+
+
 var spotLight : Light;
 
 function Start () {

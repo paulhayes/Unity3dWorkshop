@@ -1,6 +1,6 @@
 ﻿#pragma strict
 /*
- * Wand.js
+ * Wand
  */
 
 var maxDistance : float = 10.0;

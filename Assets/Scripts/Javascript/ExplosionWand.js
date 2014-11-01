@@ -1,6 +1,6 @@
 ﻿#pragma strict
 /*
- * Wand.js
+ * ExplosionWand
  */
 
 var radius = 5.0;

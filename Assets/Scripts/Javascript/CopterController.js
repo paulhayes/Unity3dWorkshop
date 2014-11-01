@@ -1,6 +1,6 @@
 ﻿#pragma strict
 /*
- * CopterController.js
+ * CopterController
  */
 
 public var frontLeft : CopterMotor;

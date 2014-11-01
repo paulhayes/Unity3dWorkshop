@@ -1,6 +1,6 @@
 ﻿#pragma strict
 /*
- * CycleColour.js
+ * CycleColour
  */
 var startColour : Color;
 var endColour : Color;

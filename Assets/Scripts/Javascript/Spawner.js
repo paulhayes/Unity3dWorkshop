@@ -1,5 +1,9 @@
 ﻿#pragma strict
 
+/*
+ * Spawner
+ */
+
 var prefab : GameObject;
 
 function Spawn (position:Vector3) {

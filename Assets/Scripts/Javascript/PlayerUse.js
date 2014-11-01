@@ -1,5 +1,9 @@
 ﻿#pragma strict
 
+/*
+ * 	PlayerUse
+ */
+
 public var playerCamera : Camera;
 public var maximumDistance : float;
 public var useKey : KeyCode;
