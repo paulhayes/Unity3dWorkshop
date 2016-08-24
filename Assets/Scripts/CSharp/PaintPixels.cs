@@ -11,13 +11,13 @@ public class PaintPixels : MonoBehaviour
 	
 	void Start () 
 	{
-		texture = renderer.sharedMaterial.mainTexture as Texture2D;
+		texture = GetComponent<Renderer>().sharedMaterial.mainTexture as Texture2D;
 	}
 	
 	void Update ()
 	{
 		RaycastHit hitInfo;
-		bool hit = collider.Raycast( Camera.main.ScreenPointToRay( Input.mousePosition ), out hitInfo, float.MaxValue );
+		bool hit = GetComponent<Collider>().Raycast( Camera.main.ScreenPointToRay( Input.mousePosition ), out hitInfo, float.MaxValue );
 		bool mouseDown = Input.GetMouseButton(0);
 		if( hit && mouseDown ){
 			Vector2 dim = hitInfo.textureCoord;

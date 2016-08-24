@@ -13,7 +13,7 @@ function Update(){
 
 function FixedUpdate () {
 	var force : Vector3 = transform.up * thrust;
-	collider.attachedRigidbody.AddForceAtPosition( force, transform.position );	
+	GetComponent.<Collider>().attachedRigidbody.AddForceAtPosition( force, transform.position );	
 }
 
 

@@ -11,9 +11,17 @@ var duration : float;
 private var progress : float;
 private var opening : boolean;
 
-function Use () {
+public function ToggleDoor () {
 	print("Using Door");
 	opening = !opening;
+}
+
+public function OpenDoor(){
+	opening = true;
+}
+
+public function CloseDoor(){
+	opening = false;
 }
 
 function Update(){

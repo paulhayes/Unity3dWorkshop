@@ -5,6 +5,6 @@ public class PlaySoundOnClick : MonoBehaviour
 {
 	void OnMouseDown()
 	{
-		audio.Play();
+		GetComponent<AudioSource>().Play();
 	}
 }

@@ -36,8 +36,8 @@ function Pickup(){
 	if( Physics.SphereCast( playerPosition, pickUpRadius, playerDirection, hit, maximumDistance, pickupLayers ) ){
 		if( hit.rigidbody ){
 			holdingObject = hit.rigidbody.transform;
-			holdingObject.rigidbody.isKinematic = true;
-			holdingObject.rigidbody.detectCollisions = false;
+			holdingObject.GetComponent.<Rigidbody>().isKinematic = true;
+			holdingObject.GetComponent.<Rigidbody>().detectCollisions = false;
 			holdingObject.parent = holdingPosition;
 			holdingObject.localPosition = Vector3.zero;
 			holdingObject.localRotation = Quaternion.identity;	
@@ -49,8 +49,8 @@ function Pickup(){
 
 function Drop(){
 	if( holdingObject ){
-		holdingObject.rigidbody.isKinematic = false;
-		holdingObject.rigidbody.detectCollisions = true;
+		holdingObject.GetComponent.<Rigidbody>().isKinematic = false;
+		holdingObject.GetComponent.<Rigidbody>().detectCollisions = true;
 		holdingObject.parent = null;	
 		holdingObject = null;	
 	}

@@ -2,9 +2,11 @@
 /*
  * Wand
  */
+class WandEvent extends UnityEngine.Events.UnityEvent.<Vector3>{}
 
 var maxDistance : float = 10.0;
-var triggerName : String;
+var OnUseWandEvent : WandEvent;
+
 
 function Use(){
 	var hit : RaycastHit;
@@ -14,10 +16,13 @@ function Use(){
 		Trigger( hit.point );
 	}
 	else {
+		Debug.Log("Didn't hit anything, triggering at max distance");
+		Debug.Log( transform.position + maxDistance * transform.forward );
 		Trigger( transform.position + maxDistance * transform.forward );
 	}
 }
 
 function Trigger(pos:Vector3){
-	SendMessage( triggerName, pos );
+	OnUseWandEvent.Invoke(pos);
 }
+

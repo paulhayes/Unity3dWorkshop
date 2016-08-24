@@ -4,5 +4,5 @@
  */
 function OnMouseDown()
 {
-	audio.Play();
+	GetComponent.<AudioSource>().Play();
 }

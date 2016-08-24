@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class DemosMenu : MonoBehaviour {
 
@@ -20,7 +21,7 @@ public class DemosMenu : MonoBehaviour {
 	
 		foreach(var scene in scenes){
 			if( GUILayout.Button(scene)){
-				Application.LoadLevel(scene);				
+				SceneManager.LoadScene(scene);				
 			}	
 		}
 	}

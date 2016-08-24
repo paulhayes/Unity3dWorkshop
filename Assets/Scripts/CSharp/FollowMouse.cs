@@ -18,8 +18,8 @@ public class FollowMouse : MonoBehaviour
 			worldPosition.y = transform.position.y;
 		}
 		
-		if( rigidbody ){
-			rigidbody.position = worldPosition;
+		if( GetComponent<Rigidbody>() ){
+			GetComponent<Rigidbody>().position = worldPosition;
 		}
 		else {
 			transform.position = worldPosition;			

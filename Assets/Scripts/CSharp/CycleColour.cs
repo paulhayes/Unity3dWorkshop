@@ -9,12 +9,12 @@ public class CycleColour : MonoBehaviour
 
 	void Start () 
 	{		
-		renderer.material = new Material( renderer.sharedMaterial );
+		GetComponent<Renderer>().material = new Material( GetComponent<Renderer>().sharedMaterial );
 	}
 	
 	void Update ()
 	{ 
 		float t = Mathf.PingPong( Time.time * speed, 1f );
-		renderer.material.color = Color.Lerp( startColor, endColor, t );
+		GetComponent<Renderer>().material.color = Color.Lerp( startColor, endColor, t );
 	}
 }

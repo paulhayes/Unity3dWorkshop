@@ -56,10 +56,10 @@ function Update () {
 
 function FixedUpdate(){
 	if( Input.GetKey( KeyCode.E ) ){
-		rigidbody.AddRelativeTorque( yawThrust * Vector3.up );	
+		GetComponent.<Rigidbody>().AddRelativeTorque( yawThrust * Vector3.up );	
 	} 
 	if( Input.GetKey( KeyCode.Q ) ){
-		rigidbody.AddRelativeTorque( -yawThrust * Vector3.up );
+		GetComponent.<Rigidbody>().AddRelativeTorque( -yawThrust * Vector3.up );
 	} 
 
 }

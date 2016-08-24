@@ -7,10 +7,10 @@ var endColour : Color;
 var cycleSpeed : float;
 
 function Start () {
-	renderer.material = new Material( renderer.sharedMaterial );
+	GetComponent.<Renderer>().material = new Material( GetComponent.<Renderer>().sharedMaterial );
 }
 
 function Update () {
 	var time = Mathf.PingPong( Time.time * cycleSpeed, 1f );
-	renderer.material.color = Color.Lerp( startColour, endColour, time );
+	GetComponent.<Renderer>().material.color = Color.Lerp( startColour, endColour, time );
 }
