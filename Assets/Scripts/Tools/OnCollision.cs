@@ -13,7 +13,7 @@ public class OnCollision : MonoBehaviour {
     public string targetTag = "Player";
     public Conditions condition = Conditions.Enter;
        
-    void OnCollisionEnter2D(Collision2D col){
+    void OnCollisionEnter(Collision col){
         if( !col.collider.CompareTag(targetTag) ){
             return;
         }
@@ -22,7 +22,7 @@ public class OnCollision : MonoBehaviour {
         }
     }
 
-    void OnCollisionExit2D(Collision2D col){
+    void OnCollisionExit(Collision col){
         if( !col.collider.CompareTag(targetTag) ){
             return;
         }

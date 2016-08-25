@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.Events;
 
-public class OnTrigger : MonoBehaviour {
+public class OnTrigger2D : MonoBehaviour {
 
     public UnityEvent OnTriggerEvent;
     public enum Conditions {
@@ -13,7 +13,7 @@ public class OnTrigger : MonoBehaviour {
     public string targetTag = "Player";
     public Conditions condition = Conditions.Enter;
        
-    void OnTriggerEnter(Collider col){
+    void OnTriggerEnter2D(Collider2D col){
         Debug.Log("OnTriggerEnter2D");
         if( !col.CompareTag(targetTag) ){
             return;
@@ -23,7 +23,7 @@ public class OnTrigger : MonoBehaviour {
         }
     }
 
-    void OnTriggerExit(Collider col){
+    void OnTriggerExit2D(Collider2D col){
         Debug.Log("OnTriggerExit2D");
         if( !col.CompareTag(targetTag) ){
             return;

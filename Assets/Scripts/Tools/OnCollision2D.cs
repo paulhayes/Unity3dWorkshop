@@ -2,9 +2,9 @@
 using System.Collections;
 using UnityEngine.Events;
 
-public class OnTrigger : MonoBehaviour {
+public class OnCollision2D : MonoBehaviour {
 
-    public UnityEvent OnTriggerEvent;
+    public UnityEvent OnCollisionEvent;
     public enum Conditions {
         Enter,
         Exit,
@@ -13,23 +13,21 @@ public class OnTrigger : MonoBehaviour {
     public string targetTag = "Player";
     public Conditions condition = Conditions.Enter;
        
-    void OnTriggerEnter(Collider col){
-        Debug.Log("OnTriggerEnter2D");
-        if( !col.CompareTag(targetTag) ){
+    void OnCollisionEnter2D(Collision2D col){
+        if( !col.collider.CompareTag(targetTag) ){
             return;
         }
         if( condition == Conditions.Enter || condition == Conditions.Both ){
-            OnTriggerEvent.Invoke();
+            OnCollisionEvent.Invoke();
         }
     }
 
-    void OnTriggerExit(Collider col){
-        Debug.Log("OnTriggerExit2D");
-        if( !col.CompareTag(targetTag) ){
+    void OnCollisionExit2D(Collision2D col){
+        if( !col.collider.CompareTag(targetTag) ){
             return;
         }
         if( condition == Conditions.Exit || condition == Conditions.Both ){
-            OnTriggerEvent.Invoke();
+            OnCollisionEvent.Invoke();
         }
     }
 }
