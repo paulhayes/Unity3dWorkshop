@@ -7,7 +7,7 @@ public class Counter : MonoBehaviour {
     public int goalAmount = 1;
     public UnityEvent OnGoalEvent;
 
-    bool changed = 0;
+    bool changed = false;
 
 	void Increment(){
         counter++;
